@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 35px 15px;
+    background: #172554;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 25px 15px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #ddd;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #2563eb;
+    color: white;
+}
+
+.gallery {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #00000015;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    display: block;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item h3 {
+    padding: 15px;
+    text-align: center;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 20px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 75%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.lightbox button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 45px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 30px;
+    background: #172554;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+    .lightbox {
+        gap: 8px;
+    }
+
+    .lightbox img {
+        max-width: 75%;
+    }
+}

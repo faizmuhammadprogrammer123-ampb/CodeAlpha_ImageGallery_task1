@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful pictures</p>
+    </header>
+
+    <nav class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="city">City</button>
+    </nav>
+
+    <main class="gallery">
+
+        <div class="gallery-item" data-category="nature">
+            <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700"
+                alt="Beautiful lake surrounded by mountains">
+            <h3>Beautiful Nature</h3>
+        </div>
+
+        <div class="gallery-item" data-category="travel">
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700"
+                alt="Beautiful travel destination">
+            <h3>Travel Adventure</h3>
+        </div>
+
+        <div class="gallery-item" data-category="city">
+            <img
+                src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=700"
+                alt="City skyline">
+            <h3>Modern City</h3>
+        </div>
+
+        <div class="gallery-item" data-category="nature">
+            <img
+                src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700"
+                alt="Green forest">
+            <h3>Green Forest</h3>
+        </div>
+
+        <div class="gallery-item" data-category="travel">
+            <img
+                src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700"
+                alt="Beautiful beach">
+            <h3>Beach Vacation</h3>
+        </div>
+
+        <div class="gallery-item" data-category="city">
+            <img
+                src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=700"
+                alt="Buildings in a city">
+            <h3>City Life</h3>
+        </div>
+
+    </main>
+
+        <div class="lightbox" id="lightbox">
+
+        <button id="closeBtn" aria-label="Close image">&times;</button>
+
+        <button id="prevBtn" aria-label="Previous image">&#10094;</button>
+
+        <img id="lightboxImage" src="" alt="">
+
+        <button id="nextBtn" aria-label="Next image">&#10095;</button>
+
+    </div>
+
+    <footer>
+        <p>Created with HTML, CSS and JavaScript</p>
+    </footer>
+
+    <script src="ttask2.js"></script>
+
+</body>
+</html>
